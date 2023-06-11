@@ -369,9 +369,9 @@ export default function MuiMarkdown({
       setContent(children);
       return;
     } else if (path) {
-      // fetch(path)
-      //   .then((res) => res.text())
-      //   .then((text) => setContent(text));
+      fetch(path)
+        .then((res) => res.text())
+        .then((text) => setContent(text));
     }
   }, [path, children]);
 
